@@ -1,6 +1,9 @@
 # GramPred
 Predict gram staining by using bacterial genomic sequences and machine learning model
 
+## Quick start
+python grampred.py --fasta example.fa
+
 ## Gene prediction by prodigal
 /path/to/prodigal -i example.fa -o example.gff -a example.faa -d example.fna -c -m -p meta
 
