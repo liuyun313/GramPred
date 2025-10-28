@@ -4,12 +4,13 @@ Predict gram staining by using bacterial genomic sequences and machine learning 
 # Usage 
 python grampred.py --fasta genome.fa --func_file annotation_file
 
-## Input
+**Input**
+
 --fasta genomic sequence in FASTA format 
 
 --func_file(optional) annotation results of genes from the genomic sequence
 
-## Output
+**Output**
 
 features.csv generated features 
 
@@ -54,19 +55,19 @@ _% This commond will predict the Gram Staining of example.fa using compositional
    
 4. Install eggnog-mapper and annotate the predicted genes
 
-    % Install eggnog-mapper using conda
+   _% Install eggnog-mapper using conda_
    
    conda install -c bioconda eggnog-mapper
 
-   % Download bacterial database 
+   _% Download bacterial database _
 
    python /path/to/eggnog-mapper/download_eggnog_data.py -y -f -H -d 2 --data_dir /path/to/eggnog
 
-   % Annotation 
+   _% Annotation_ 
 
    python /path/to/eggnog-mapper/emapper.py --cpu 0 -i example.fna --itype CDS --output example -d bact --data_dir /path/to/eggnog-mapper/eggnog-mapper-master/data
 
-   % Extract GO, COG and KEGG results 
+   _% Extract GO, COG and KEGG results _
 
    cat example.emapper.annotations |sed '/#.*/d' |cut -f1,7,10,12 |awk -F"\t" '{print $1"\t"$2"\t"$3"\t"$4}' |sed '/-: -/d'|sort -k 1.3n |uniq |sed '1i\query\tCOG_category\tGOs\tKEGG_ko' >example.filtered
    
