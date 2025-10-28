@@ -2,7 +2,7 @@
 Predict gram staining by using bacterial genomic sequences and machine learning model
 
 # Usage 
-python grampred.py --fasta genome.fa --func_file annotation_file
+    python grampred.py --fasta genome.fa --func_file annotation_file
 
 **Input**
 
