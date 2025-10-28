@@ -6,15 +6,15 @@ python grampred.py --fasta genome.fa --func_file annotation_file
 
 **Input**
 
---fasta genomic sequence in FASTA format 
+    --fasta     genomic sequence in FASTA format 
 
---func_file(optional) annotation results of genes from the genomic sequence
+    --func_file(optional)     annotation results of genes from the genomic sequence
 
 **Output**
 
-features.csv generated features 
+    features.csv     generated features 
 
-predict.csv prediction result 
+    predict.csv     prediction result 
 
 ## Quick start
 1. Prepare genomic sequence in FASTA format, eg. example.fa.
