@@ -1,6 +1,20 @@
 # GramPred
 Predict gram staining by using bacterial genomic sequences and machine learning model
 
+# Usage 
+python grampred.py --fasta genome.fa --func_file annotation_file
+
+## Input
+--fasta genomic sequence in FASTA format 
+
+--func_file(optional) annotation results of genes from the genomic sequence
+
+## Output
+
+features.csv generated features 
+
+predict.csv prediction result 
+
 ## Quick start
 1. Prepare genomic sequence in FASTA format, eg. example.fa.
 2. Install python and required packages
