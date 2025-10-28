@@ -13,7 +13,7 @@ Predict gram staining by using bacterial genomic sequences and machine learning 
   
     Bio==1.7.1
   
-4. Predict Gram Staining
+3. Predict Gram Staining
    
     python grampred.py --fasta example.fa
 
@@ -32,13 +32,13 @@ _% This commond will predict the Gram Staining of example.fa using compositional
   
     Bio==1.7.1
    
-4. Install prodigal and predict genes from the genomic sequence
+3. Install prodigal and predict genes from the genomic sequence
 
     conda install prodigal
 
     /path/to/prodigal -i example.fa -o example.gff -a example.faa -d example.fna -c -m -p meta
    
-5. Install eggnog-mapper and annotate the predicted genes
+4. Install eggnog-mapper and annotate the predicted genes
 
     % Install eggnog-mapper using conda
    
@@ -56,7 +56,9 @@ _% This commond will predict the Gram Staining of example.fa using compositional
 
    cat example.emapper.annotations |sed '/#.*/d' |cut -f1,7,10,12 |awk -F"\t" '{print $1"\t"$2"\t"$3"\t"$4}' |sed '/-: -/d'|sort -k 1.3n |uniq |sed '1i\query\tCOG_category\tGOs\tKEGG_ko' >example.filtered
    
-8. Predict gram staining by GramPred
+5. Predict gram staining by GramPred
 
    python grampred.py --fasta example.fa --func_file example.filtered
 
+## Contact us
+liuyun313@jlu.edu.cn
