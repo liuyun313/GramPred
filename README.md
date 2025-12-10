@@ -22,12 +22,7 @@ Predict gram staining by using bacterial genomic sequences and machine learning 
 **2. Install python and required packages**
 
     python==3.11.7
-   
-    scikit-learn==1.5.1
-  
-    joblib==1.2.0
-  
-    Bio==1.7.1
+    pip install -r requirements.txt
   
 **3. Predict Gram Staining**   
 
